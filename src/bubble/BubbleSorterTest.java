@@ -1,12 +1,8 @@
 package bubble;
 
-import static org.junit.Assert.*;
+import org.junit.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
 
 public class BubbleSorterTest {
 
@@ -34,7 +30,7 @@ public class BubbleSorterTest {
         BubbleSorter sorter = new BubbleSorter(a);
         sorter.sort();
         //what line of code should I add here to see if the Array is Sorted?
-        assertArrayEqual("arrays are not equal", sorted, a);
+        assertArrayEquals("arrays are not equal", sorted, a);
     }
 
     @Test
@@ -46,7 +42,7 @@ public class BubbleSorterTest {
         BubbleSorter sorter = new BubbleSorter(a);
         sorter.sort();
         //what line of code should I add here to see if the Array is Sorted?
-        assertArrayEqual("arrays are not equal", sorted, a);
+        assertArrayEquals("arrays are not equal", sorted, a);
     }
 
     @Test
@@ -57,7 +53,7 @@ public class BubbleSorterTest {
         BubbleSorter sorter = new BubbleSorter(a);
         sorter.sort();
         //what line of code should I add here to see if the Array is Sorted?
-        assertArrayEqual("arrays are not equal", sorted, a);
+        assertArrayEquals("arrays are not equal", sorted, a);
     }
 
 }

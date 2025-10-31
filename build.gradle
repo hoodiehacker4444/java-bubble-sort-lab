@@ -11,8 +11,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 application {
@@ -28,14 +27,17 @@ sourceSets {
     main {
         java {
             srcDirs = ['src']
+            exclude '**/BubbleSorterTest.java'
+        }
+            }
+        test {
+                java {
+                        srcDirs = ['src']
+                        include '**/BubbleSorterTest.java'
         }
     }
 }
 
 tasks.named('run') {
     standardInput = System.in
-}
-
-test {
-    useJUnitPlatform()
 }
